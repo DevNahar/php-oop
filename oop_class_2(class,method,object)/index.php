@@ -1,40 +1,43 @@
 <?php  include "header.php";?>
 
                         
-<!--======== 1st class code =========-->
+<!--======== 2nd class code =========-->
 
-<h2 class="text-center">OOP First Class</h2>
+<h2 class="text-center">OOP 2nd Class</h2>
+<form action="controller.php" method="post" class="mt-5 mb-5">
+  <table class="m-auto ">
+    <tr>
+      <td>Enter First Number : </td>
+      <td><input type="number" name="num1"></td>
+    </tr>
+    <tr>
+      <td>Enter Second Number : </td>
+      <td><input type="number" name="num2"></td>
+    </tr>
+    <tr>
+      <td>
+          <?php 
+        if(isset($_SESSION['$message'])){
+          ?>
+          <span class="text-danger"><?php echo $_SESSION['$message'] ;?> </span> 
+        <?php 
+        } unset($_SESSION['$message']) ; 
+        ?>
+        </td>
+      </tr>
+    <tr>
+      <td></td>
+      <td><button Class="btn btn-primary mt-2" type="submit" name="numSubmit">Submit</button></td>
+    </tr>
+  </table>
+ 
+</form>
 
-<?php
-
-class Person{
-    public $name = "Ashekun nahar";  //dui babe kora jai
-    // public $name ;     //dui babe kora jai
-    public $age;
-
-    function personName(){
-      echo "Person name is : ". $this->name ;
-    }
-
-    function personAge($value){
-      return "Person age is : " . $this->age = $value; // $value k $age poperty e re-assign kora hoese
-      
-    }
-  }
-  
-// object create
-$personObj = new Person;
-//poperty show
-echo $personObj->name ;   //dui babe kora jai
-// echo $personObj->name = "Ashekun Nahar";  //ababe o assign kora jai
-echo "<br>";
-//method show
-$personObj->personName() ; //method e echo korle ekhane echo kora lagbe na
-echo "<br>";
-echo $personObj->personAge(18) ; // ebabe argument pathano jai
 
 
-?>
+
+
+
                       
                       
 <?php  include "footer.php";?>                   
