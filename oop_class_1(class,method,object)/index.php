@@ -1,4 +1,4 @@
-<?php  include "header.php";?>
+<?php  include "../header&footer/header.php";?>
 
                         
 <!--======== 1st class code =========-->
@@ -37,7 +37,7 @@ echo $personObj->personAge(18) ; // ebabe argument pathano jai
 ?>
                       
                       
-<?php  include "footer.php";?>                   
+<?php  include "../header&footer/footer.php";?>                   
                       
                       
                       

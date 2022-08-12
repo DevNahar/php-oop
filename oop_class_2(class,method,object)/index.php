@@ -1,4 +1,6 @@
-<?php  include "header.php";?>
+<?php 
+  session_start();
+ include "../header&footer/header.php";?>
 
                         
 <!--======== 2nd class code =========-->
@@ -78,7 +80,7 @@
 
                       
                       
-<?php  include "footer.php";?>                   
+<?php  include "../header&footer/footer.php";?>                   
                       
                       
                       
