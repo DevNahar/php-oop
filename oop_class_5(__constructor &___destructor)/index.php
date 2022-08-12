@@ -8,29 +8,26 @@
 <?php
 //__constructor && __destructor
 
-class Person{
-  public $name;
-  public $age;
-  public $id;
+class Userdata{
+  public $user;
+  public $userid;
+  
 
-  public function __construct($pName,$pAge){
-    $this->name=$pName;
-    $this->age=$pAge;
+  public function __construct($uName,$uId){   //object er value gulu constructor method e parametre hisebe accept kore property er modde assign kore
+    $this->user=$uName;
+    $this->userid=$uId;
+    echo "Name: {$this->user}Id: {$this->userid}";
   }
 
-  public function setId($id){
-    $this->id=$id;
-  }
+  
   public function __destruct(){
-    if(!empty($this->id)){
-      echo "saving person";
-    }
+    unset($this->user);
+    unset($this->user);
   }
 }
 
-$personObj= new person("Ashekun Nahar","30");
-$personObj->setId(7);
-unset($personObj);
+$userdataObj= new Userdata("Ashekun Nahar","30"); //constructor method value gulu oi class er object er pashe dea jai
+
 ?>
                       
                       
